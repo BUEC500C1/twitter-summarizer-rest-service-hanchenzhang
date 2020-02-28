@@ -46,7 +46,7 @@ def createpng(textlist):
 	thebackground = "Boston_University_block_logo.png"
 	im=Image.open(thebackground)
 	im = im.resize((1080,720))
-	font_name = r'./Artifakt Element Black Italic.tff'
+	font_name = r'./Artifakt Element Black Italic.ttf'
 	#imagelist = [];
 	i = 0
 	for tweet in textlist:
