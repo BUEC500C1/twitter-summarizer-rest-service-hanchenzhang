@@ -1,6 +1,7 @@
 import tweepy
 from PIL import Image,ImageDraw,ImageFont
 import keys
+import configparser
 import os
 import re
 from urllib import request
@@ -8,10 +9,17 @@ import time
 import json
 
 def Twitterfeed(account):
-	consumer_key = keys.consumer_key
-	consumer_secret = keys.consumer_secret
-	access_key = keys.access_token
-	access_secret = keys.access_secret
+	config = configparser.ConfigParser()
+	config.read(r'keys')
+# 	consumer_key = keys.consumer_key
+# 	consumer_secret = keys.consumer_secret
+# 	access_key = keys.access_token
+# 	access_secret = keys.access_secret
+	
+	consumer_key = config.get('auth','consumer_key').strip()
+	consumer_secret = config.get('auth','consumer_secret').strip()
+	access_key = config.get('auth','access_token').strip()
+	access_secret = config.get('auth','access_secret').strip()
 
 	auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 	auth.set_access_token(access_key, access_secret)
