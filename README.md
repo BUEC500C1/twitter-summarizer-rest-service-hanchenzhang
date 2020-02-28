@@ -13,7 +13,7 @@ The file videoHW4.py is the main function file that contains:
 
 Twitterfeed(): carwling text from specified twitter user based on tweepy (API).
 createpng(): put each text into png image that stores in the folder image.github
-video_convertion() grabbing images from the image folder and generate video that display each frame for 3 seconds. The video generation command are all based on ffmpeg.
+video_convertion() grabbing images from the image folder and generate video that display each frame for 3 seconds. The video generation command are all based on ffmpeg. The root directory contains a file "output_@BU_Tweets.mp4" is shown as example.
 
 # The Queue:
 The file videoqueue.py create a queue that works for a "brain" that control the running of functions in the videoHW4.py.
