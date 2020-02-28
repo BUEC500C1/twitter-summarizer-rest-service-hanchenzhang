@@ -1,6 +1,5 @@
 import tweepy
 from PIL import Image,ImageDraw,ImageFont
-import keys
 import configparser
 import os
 import re
@@ -11,10 +10,6 @@ import json
 def Twitterfeed(account):
 	config = configparser.ConfigParser()
 	config.read(r'keys')
-# 	consumer_key = keys.consumer_key
-# 	consumer_secret = keys.consumer_secret
-# 	access_key = keys.access_token
-# 	access_secret = keys.access_secret
 	
 	consumer_key = config.get('auth','consumer_key').strip()
 	consumer_secret = config.get('auth','consumer_secret').strip()
