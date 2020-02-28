@@ -1,4 +1,4 @@
 tweepy
-PIL
+pillow
 re
 time
