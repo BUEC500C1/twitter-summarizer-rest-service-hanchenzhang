@@ -46,13 +46,14 @@ def createpng(textlist):
 	thebackground = "Boston_University_block_logo.png"
 	im=Image.open(thebackground)
 	im = im.resize((1080,720))
+	font_name = r'./Artifakt Element Black Italic.tff'
 	#imagelist = [];
 	i = 0
 	for tweet in textlist:
 		text = tweet
 		im1 = im.resize((1080,720))
 		dr = ImageDraw.Draw(im1)
-		dr.text((10, 360), tweet, font=ImageFont.truetype('arial.ttf', 36), fill="#000000") 
+		dr.text((10, 360), tweet, font=ImageFont.truetype(font_name, 36), fill="#000000") 
 		im1.save("image/test%d.png"%i)#Users/zhanghanchen/Desktop/spring2020/EC500/HW4/image
 		#print(im1)
 		#imagelist.append(im1)
