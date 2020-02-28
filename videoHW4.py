@@ -52,7 +52,7 @@ def createpng(textlist):
 		text = tweet
 		im1 = im.resize((1080,720))
 		dr = ImageDraw.Draw(im1)
-		dr.text((10, 360), tweet, font=ImageFont.truetype('Arial.ttf', 36), fill="#000000") 
+		dr.text((10, 360), tweet, font=ImageFont.truetype('arial.ttf', 36), fill="#000000") 
 		im1.save("image/test%d.png"%i)#Users/zhanghanchen/Desktop/spring2020/EC500/HW4/image
 		#print(im1)
 		#imagelist.append(im1)
