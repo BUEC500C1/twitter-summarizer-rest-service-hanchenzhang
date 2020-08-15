@@ -1,12 +1,9 @@
-# video-hanchenzhang: Multi-Processing and Threading
+# REST-API Service-hanchenzhang: Integration of Video Creation Module
 
-This is the EC500 HW4 Video: Multi-Processing and Threading
+This is the EC500 HW5 REST-API from Hanchen Zhang: Twitter Summarizer Rest-service
 
 # Assignment Announcement:
-Main Exercise:  Using the twitter feed, construct a daily video summarizing a twitter handle day
-Convert text into an image in a frame
-Do a sequence of all texts and images in chronological order.
-Display each video frame for 3 seconds
+Main Exercise:  Integrate hw4 module to become a RESTFUL system, Deploy your system to free AWS services
 
 # Introduction to Hanchen's video generation package.
 The file videoHW4.py is the main function file that contains:
