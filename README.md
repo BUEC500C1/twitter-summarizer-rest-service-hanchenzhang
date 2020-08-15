@@ -6,11 +6,12 @@ This is the EC500 HW5 REST-API from Hanchen Zhang: Twitter Summarizer Rest-servi
 Main Exercise:  Integrate hw4 module to become a RESTFUL system, Deploy your system to free AWS services
 
 # Introduction to Hanchen's video generation package.
-The file videoHW4.py is the main function file that contains:
+The file app.py is the main function file that construct a basic flask-Restful web system with two front end pages:
 
-Twitterfeed(): carwling text from specified twitter user based on tweepy (API).
-createpng(): put each text into png image that stores in the folder image.github
-video_convertion() grabbing images from the image folder and generate video that display each frame for 3 seconds. The video generation command are all based on ffmpeg. The root directory contains a file "output_@BU_Tweets.mp4" is shown as example.
+`./templates/main.html` is the root page which allow user to put the target twitter username to create the video
+`./templates/result.html` is the reuslt page after the video successfully created.
+
+The `./videos` directory contains a file "output_@BU_Tweets.mp4" is shown as example.
 
 # The Queue:
 The file videoqueue.py create a queue that works for a "brain" that control the running of functions in the videoHW4.py.
@@ -20,11 +21,18 @@ This function set an arbitary number which is the maximum number that the thread
 
 ![](./running.png)
 
-# The Test:
-The file testqueue.py is the pytest running functions. The testing receive return code of 1 if all videos are created. For any invalid twitter user name, the testing receive return code of 0.
-
 # Instruction of Running the package:
 1. git clone the project
 2. Apply twitter developer api key and substitute the key in the key file from the root directory
-3. pip install required dependency shown in the requirement.txt
-4. running videoqueue.py
+3. Go the directory and create the vitrtual environment, since python2 is no more useful, here is the python3 command:
+```
+$ python3 -m venv venv
+$ . venv/bin/activate
+```
+4. pip install required dependency shown in the requirement.txt
+5. running the flask app by following command:
+```
+$ export FLASK_APP=app.py
+$ flask run
+```
+6. open an explorer and copy the link to run.
